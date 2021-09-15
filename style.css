@@ -1,0 +1,67 @@
+body {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.accordion {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: left;
+    outline: none;
+    transition: all .3s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\002B';
+    margin-left: 5px;
+    float: right;
+    color: #777;
+    font-weight: bold;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    max-height: 0;
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.counter {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.counter h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.counter p {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.clock {
+    width: 200px;
+    height: 100px;
+    border: 2px solid #000000;
+    border-radius: 25%;
+    margin: 20px auto;
+    text-align: center;
+}
