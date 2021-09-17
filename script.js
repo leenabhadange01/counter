@@ -34,28 +34,28 @@ setTimeout(() => {
 
 
 
-// digital clock in process
-// var sec = 0;
-// var min = 0;
-// var hr = 0;
-// var am = !am;
-// var clock = document.querySelector(".clock").innerHTML;
-// console.log(clock);
+//digital clock in process
+var sec = 0;
+var min = 0;
+var hr = 0;
+var am = true;
+var clock = document.querySelector(".clock").innerHTML;
+console.log(clock);
 
-// setInterval(() => {
-//     if (sec <= 60) {
-//         sec;
-//         min++;
-//     }
-//     if (min < 60) {
-//         min;
-//         hr++;
-//     }
-//     if (hr < 12) {
-//         hr++;
-//         am = !am ? "am" : "pm";
-//     }
-
-//     var time = hr + ":" + min + ":" + sec + am;
-//     document.querySelector(".clock").innerHTML = time;
-// }, 10);
+setInterval(() => {
+    sec++;
+    if (sec == 60) {
+        sec = 0;
+        min++;
+    }
+    if (min == 60) {
+        min = 0;
+        hr++;
+    }
+    if (hr == 12) {
+        am = !am;
+        hr = 0;
+    }
+    var time = hr + ":" + min + ":" + sec + " " + (am == true ? "am" : "pm");
+    document.querySelector(".clock").innerHTML = time;
+}, 0.5);
